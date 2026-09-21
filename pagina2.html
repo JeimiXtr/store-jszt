@@ -864,3 +864,28 @@
             checkoutModal.querySelector('div').classList.add('scale-95');
             document.body.style.overflow = 'auto';
         }
+
+        // Success controls
+        function openSuccess() {
+            successModal.classList.remove('opacity-0', 'pointer-events-none');
+            successModal.querySelector('div').classList.remove('scale-95');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccess() {
+            successModal.classList.add('opacity-0', 'pointer-events-none');
+            successModal.querySelector('div').classList.add('scale-95');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Toast notification
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
