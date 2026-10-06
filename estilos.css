@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 
 header{
         background-color: #2E2E33;
