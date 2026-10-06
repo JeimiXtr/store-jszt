@@ -5,8 +5,6 @@
 
 header{
         background-color: #2E2E33;
-    
-        padding: px;
     }
 header h2{
         color: white;
@@ -41,6 +39,6 @@ nav button{
 
     }
 
-    .imagen01{
-        width: 50px;
-    }
+   main article img{
+    width: 50px;
+   }
