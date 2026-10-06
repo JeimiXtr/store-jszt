@@ -1,32 +1,22 @@
-
-*{
-    box-sizing: border-box;
-    
-
+* {
+  box-sizing: border-box;
+  color: #002b52;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-    nav h3{
-        color: blue;
-        display: grid;
+body {
+  margin: 1px;
+  display: grid;
+  background-color: #e6f0f7;
 
-    }
-    nav button{
-       background-color: black;
-       width: 200px;
-      padding: 5px;
-      margin-left: 50px;
-       border: 1px;
-       
-        
-    }   
-    nav button a{
-       
-        color: white;
-    }
-    .tituloprincipal{
-        width: 200px;
-        margin-top: -10px;
-        margin-left: 500px ;
-        color: blue;
-        
-    }
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+
+  min-height: 100vh;
+}
