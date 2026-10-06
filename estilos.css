@@ -1,5 +1,32 @@
-* {
-  box-sizing: border-box;
-  color: #002b52;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+*{
+    box-sizing: border-box;
+    
+
 }
+
+    nav h3{
+        color: blue;
+        display: grid;
+
+    }
+    nav button{
+       background-color: black;
+       width: 200px;
+      padding: 5px;
+      margin-left: 50px;
+       border: 1px;
+       
+        
+    }   
+    nav button a{
+       
+        color: white;
+    }
+    .tituloprincipal{
+        width: 200px;
+        margin-top: -10px;
+        margin-left: 500px ;
+        color: blue;
+        
+    }
