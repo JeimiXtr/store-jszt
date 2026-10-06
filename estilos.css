@@ -1,3 +1,5 @@
-.tituloprincipal{
-    color:blue
+* {
+  box-sizing: border-box;
+  color: #002b52;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
