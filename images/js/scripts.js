@@ -7,7 +7,7 @@
 // Use this file to add JavaScript to your project
 
 /*!
-* Instituto Advance - Scripts del Sitio
+* Instituto Advance - Scripts del Sitio 
 */
 
 window.addEventListener('DOMContentLoaded', event => {
