@@ -68,6 +68,9 @@ main {
   background-color: #c0cfdc;
 }
 
+main section img{
+  width: 2px;
+}
 
 /* ================================
    ASIDE
