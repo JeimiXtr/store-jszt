@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/estiloSenati.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--ESTO ES UN COMENTARIO-->
+    <header>
+      <a href="index.html">
+        <img src="images/logo.png" alt="esto me manda al inicio" />
+      </a>
+
+      <h1>Formularios</h1>
+    </header>
+    <nav>
+      <ul>
+        <a href="index.html"><li>Inicio</li></a>
+        <a href="miPaginaWeb.html"><li>Mi Primera pagina</li></a>
+        <a href="segunda.html"><li>Segunda Pagina</li></a>
+        <a href="tercera.html"><li>Tercera pagina Web</li></a>
+        <a href="cuarta.html"><li>Cuarta Pagina web</li></a>
+        <a href="quinta.html"><li>Quinta Página Web</li></a>
+        <a href="tarea3/index.html"><li>Plantilla Bootstrap</li></a>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <article>
+          <h3>Mi Primer Formulario</h3>
+        </article>
+        <article></article>
+        <article></article>
+        <article></article>
+      </section>
+    </main>
+    <aside>
+      <h3>Ejemplo de Formulario</h3>
+      <h2>REGISTRO DE CLIENTE</h2>
+      <form action="#" class="form-group">
+        <label for="nombre">Nombre: </label>
+        <input class="form-control" type="text" id="nombre" />
+        <br />
+        <label for="apellido">Apellido: </label>
+        <input class="form-control" type="text" id="apellido" />
+        <br />
+        <label for="correo">Correo:</label>
+        <input class="form-control" type="email" id="correo" /><br />
+        <label for="telefono">Telefono:</label>
+        <input class="form-control" type="tel" id="telefono" /><br />
+        <label for="edad">Edad:</label>
+        <input class="form-control" type="number" id="edad" /><br />
+        <label for="ciudad">Ciudad:</label>
+        <select class="form-control" name="ciudad" id="ciudad">
+          <option value="puno">Puno</option>
+          <option value="juliaca">Juliaca</option>
+          <option value="ilave">Ilave</option>
+          <option value="juli">Juli</option>
+          <option value="yunguyo">Yunguyo</option>
+          <option value="lampa">Lampa</option>
+          <option value="azangaro">Azangaro</option></select
+        ><br />
+        <label for="tipo">Tipo:</label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          value="cliente"
+        />
+        Cliente
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          value="empresa"
+        />Empresa
+        <br />
+        <input type="checkbox" name="terminos" /><label for="terminos"
+          >Acepto los Terminos</label
+        ><br />
+        <button class="btn btn-primary" type="submit">Aceptar</button>
+        <button class="btn btn-danger" type="reset">Limpiar</button>
+        <br />
+        <p>Mensaje de Resultado</p>
+      </form>
+    </aside>
+    <footer>
+      <h4>Enlaces de Interes</h4>
+      <ul>
+        <li>
+          <a href="https://senati.blackboard.com/" target="_blank"
+            >Blackboard</a
+          >
+        </li>
+        <li><a href="#" target="_blank">Mi Repositorio</a></li>
+        <li>
+          <a href="https://arnoldbgq.github.io/cursofrontend/"
+            >Pagina del Instructor</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/arnoldbgq/cursofrontend/tree/main"
+            target="_blank"
+            >Repositorio del Instructor</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://startbootstrap.com/?showPro=false&showAngular=false&showVue=false"
+            target="_blank"
+            >Plantillas de Boostrap</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
