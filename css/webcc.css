@@ -1,0 +1,32 @@
+ header{
+        justify-content: center;
+        display: flex;
+        background-color: #847B3C;
+    }
+    header h3{
+        color: white;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #D9C11A ;
+        
+    }
+    nav a{
+        margin: 8px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: black;
+        border: 1px solid black;
+        padding: 7px;
+    }
+
+    main{
+        background-color:#D4D4D4 ;
+        padding: 10PX;
+       
+    }
+    main section{
+        background-color: azure;
+    }
