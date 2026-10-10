@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Formularios</title>
-    <link rel="stylesheet" href="css/formulario.css" />
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/estiloSenati.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,9 +22,9 @@
     </header>
     <nav>
       <ul>
-        <a href="index.html"><li>Inicio</li></a>
-        <a href="boostrap.html"><li>CARRERAS</li></a>
-      
+        <a href="index.html"><li>INICO</li></a>
+        <a href="formulario.html"><li>LLENAR FORMULARIO</li></a>
+     
       </ul>
     </nav>
     <main>
@@ -41,17 +42,17 @@
       <h2>REGISTRO DE CLIENTE</h2>
       <form action="#" class="form-group">
         <label for="nombre">Nombre: </label>
-        <input class="form-control" type="text" id="nombre" />
+        <input class="form-control" type="text" id="nombre" required/>
         <br />
         <label for="apellido">Apellido: </label>
-        <input class="form-control" type="text" id="apellido" />
+        <input class="form-control" type="text" id="apellido" required/>
         <br />
         <label for="correo">Correo:</label>
-        <input class="form-control" type="email" id="correo" /><br />
+        <input class="form-control" type="email" id="correo" required/><br />
         <label for="telefono">Telefono:</label>
         <input class="form-control" type="tel" id="telefono" /><br />
         <label for="edad">Edad:</label>
-        <input class="form-control" type="number" id="edad" /><br />
+        <input class="form-control" type="number" id="edad" required min="17" max="100" /><br />
         <label for="ciudad">Ciudad:</label>
         <select class="form-control" name="ciudad" id="ciudad">
           <option value="puno">Puno</option>
@@ -77,13 +78,13 @@
           value="empresa"
         />Empresa
         <br />
-        <input type="checkbox" name="terminos" /><label for="terminos"
+        <input type="checkbox" name="terminos" required /><label for="terminos"
           >Acepto los Terminos</label
         ><br />
-        <button class="btn btn-primary" type="submit">Aceptar</button>
+        <button class="btn btn-primary" type="submit" onclick="formu()">Aceptar</button>
         <button class="btn btn-danger" type="reset">Limpiar</button>
         <br />
-        <p>Mensaje de Resultado</p>
+        <p id="salida">Mensaje de Resultado</p>
       </form>
     </aside>
     <footer>
@@ -116,5 +117,6 @@
         </li>
       </ul>
     </footer>
+    <script src="js/ form.js"></script>
   </body>
 </html>
