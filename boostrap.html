@@ -13,58 +13,58 @@
         <!-- Bootstrap 5 CSS Core -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     </head>
-    <body style="background-color: #f8fafc; color: #334155; font-family: system-ui, -apple-system, sans-serif;">
+    <body style="background-color: #0b132b; color: #e0f2fe; font-family: system-ui, -apple-system, sans-serif;">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #1c2541 !important; border-bottom: 2px solid #3a506b;">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand fw-bold" style="color: #0284c7 !important;" href="#!">Instituto Advance</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand fw-bold text-info" href="#!">Instituto Advance</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-lg-4 align-items-center">
-                        <li class="nav-item"><a class="nav-link active" style="color: #0284c7 !important;" aria-current="page" href="index2.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active text-info" aria-current="page" href="#">Inicio</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programas Académicos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Todos los Cursos</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Carreras Técnicas</a></li>
-                                <li><a class="dropdown-item" href="#!">Diplomados</a></li>
+                            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programas Académicos</a>
+                            <ul class="dropdown-menu border-0 shadow" style="background-color: #1c2541;">
+                                <li><a class="dropdown-item text-light" href="#cursos" style="background: transparent;">Todos los Cursos</a></li>
+                                <li><hr class="dropdown-divider bg-secondary" /></li>
+                                <li><a class="dropdown-item text-light" href="#cursos" style="background: transparent;">Carreras Técnicas</a></li>
+                                <li><a class="dropdown-item text-light" href="#cursos" style="background: transparent;">Diplomados</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <!-- Botón Carrito / Matrícula integrado con JS -->
+                    <!-- Botón Carrito / Matrícula integrado -->
                     <form class="d-flex ms-lg-3 mt-3 mt-lg-0">
-                        <button class="btn" style="color: #0284c7; border-color: #0284c7;" type="button">
+                        <button class="btn btn-outline-info" type="button">
                             <i class="bi-cart-fill me-1"></i>
-                            Matrícula
-                            <span id="badgeCarrito" class="badge text-white ms-1 rounded-pill" style="background-color: #0284c7 !important;">0</span>
+                           
+                            <span id="badgeCarrito" class="badge bg-info text-dark ms-1 rounded-pill">0</span>
                         </button>
                     </form>
                 </div>
             </div>
         </nav>
 
-        <!-- Product section-->
-        <section class="py-5">
+        <!-- Product section (Sección Principal Dinámica) -->
+        <section class="py-5" style="background-color: #0b132b;">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
-                        <!-- ID imgPrincipal para conectar con JS -->
-                        <img id="imgPrincipal" class="card-img-top mb-5 mb-md-0 rounded shadow-lg border border-light" style="cursor: pointer;" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=700&fit=crop" alt="Programa de Desarrollo Web - Instituto Advance" />
+                        <!-- Imagen Principal -->
+                        <img id="imgPrincipal" class="card-img-top mb-5 mb-md-0 rounded shadow-lg border border-info" style="cursor: pointer; height: 400px; object-fit: cover;" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=700&fit=crop" alt="Programa Académico" />
                     </div>
                     <div class="col-md-6">
-                        <div class="small mb-1 text-muted">CÓDIGO: ADV-2024-DEV</div>
-                        <h1 class="display-5 fw-bolder text-dark">Desarrollo Web & Frontend Senior</h1>
+                        <div id="txtCodigo" class="small mb-1 text-info font-monospace">CÓDIGO: ADV-2024-DEV</div>
+                        <h1 id="txtTitulo" class="display-5 fw-bolder text-white">Desarrollo Web & Frontend Senior</h1>
                         <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through text-muted">S/ 450.00</span>
-                            <span class="fw-bold" style="color: #0284c7 !important;">S/ 299.00 / mes</span>
+                            <span id="txtPrecioAntiguo" class="text-decoration-line-through text-muted me-2">S/ 450.00</span>
+                            <span id="txtPrecioActual" class="fw-bold text-info">S/ 299.00 / mes</span>
                         </div>
-                        <p class="lead text-secondary">Conviértete en un desarrollador profesional con el programa intensivo del Instituto Advance. Aprende HTML5, CSS3, JavaScript, Bootstrap y frameworks modernos con metodologías 100% prácticas.</p>
+                        <p id="txtDescripcion" class="lead text-light" style="opacity: 0.85;">Conviértete en un desarrollador profesional con el programa intensivo del Instituto Advance. Aprende HTML5, CSS3, JavaScript, Bootstrap y frameworks modernos con metodologías 100% prácticas.</p>
                         <div class="d-flex align-items-center">
-                            <input class="form-control text-center me-3 shadow-sm" id="inputQuantity" type="number" value="1" min="1" style="max-width: 4rem; border-color: #0284c7;" />
-                            <button id="btnInscribir" class="btn text-white d-flex align-items-center shadow-sm" style="background-color: #0284c7;" type="button">
+                            <input class="form-control text-center me-3 text-white bg-dark border-info" id="inputQuantity" type="number" value="1" min="1" style="max-width: 4rem" />
+                            <button id="btnInscribir" class="btn btn-info fw-bold text-dark d-flex align-items-center shadow-sm" type="button">
                                 <i class="bi-check-circle-fill me-2"></i>
-                                Inscribirme Ahora
+                                <a href="formulario.html">Inscribirme</a>
                             </button>
                         </div>
                     </div>
@@ -72,97 +72,178 @@
             </div>
         </section>
 
-        <!-- Related items section-->
-        <section class="py-5" style="background-color: #f1f5f9 !important;">
+        <!-- Related items section (Listado de Cursos) -->
+        <section id="cursos" class="py-5" style="background-color: #1c2541;">
             <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4 text-dark">Otros Programas Destacados</h2>
+                <h2 class="fw-bolder mb-4 text-white">Otros Programas Destacados</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    
+                    <!-- Curso 1 -->
                     <div class="col mb-5">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=450&h=300&fit=crop" alt="Análisis de Datos" />
+                        <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0b132b;">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=450&h=300&fit=crop" alt="Análisis de Datos" style="height: 180px; object-fit: cover;" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder text-dark">Análisis y Ciencia de Datos</h5>
-                                    <p class="text-muted">S/ 250.00 - S/ 400.00</p>
+                                    <h5 class="fw-bolder text-white">Análisis y Ciencia de Datos</h5>
+                                    <p class="text-info">S/ 350.00 / mes</p>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn mt-auto" style="color: #0284c7; border-color: #0284c7;" href="formulario.html">Inscribirse</a></div>
+                                <div class="text-center">
+                                    <button class="btn btn-outline-info mt-auto w-100 btn-seleccionar" 
+                                        data-codigo="ADV-2024-DATA"
+                                        data-titulo="Análisis y Ciencia de Datos"
+                                        data-precioantiguo="S/ 480.00"
+                                        data-precioactual="S/ 350.00 / mes"
+                                        data-descripcion="Domina Python, SQL, Power BI y técnicas avanzadas de machine learning para interpretar grandes volúmenes de datos y tomar decisiones estratégicas de negocio."
+                                        data-imagen="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=700&fit=crop">
+                                        Ver Programa
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Curso 2 -->
                     <div class="col mb-5">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: #0284c7;">Beca 20%</div>
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=450&h=300&fit=crop" alt="Ciberseguridad" />
+                        <div class="card h-100 shadow-sm border-0 text-white position-relative" style="background-color: #0b132b;">
+                            <div class="badge bg-info text-dark position-absolute" style="top: 0.5rem; right: 0.5rem">Beca 20%</div>
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=450&h=300&fit=crop" alt="Ciberseguridad" style="height: 180px; object-fit: cover;" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder text-dark">Fundamentos de Ciberseguridad</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
+                                    <h5 class="fw-bolder text-white">Fundamentos de Ciberseguridad</h5>
                                     <span class="text-muted text-decoration-line-through">S/ 350.00</span>
-                                    <span class="fw-bold" style="color: #0284c7;">S/ 280.00</span>
+                                    <span class="text-info fw-bold">S/ 280.00</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn mt-auto" style="color: #0284c7; border-color: #0284c7;" href="formulario.html">Inscribirse</a></div>
+                                <div class="text-center">
+                                    <button class="btn btn-outline-info mt-auto w-100 btn-seleccionar" 
+                                        data-codigo="ADV-2024-SEC"
+                                        data-titulo="Fundamentos de Ciberseguridad"
+                                        data-precioantiguo="S/ 350.00"
+                                        data-precioactual="S/ 280.00 / mes"
+                                        data-descripcion="Aprende los principios de la seguridad informática, protección de redes, hacking ético defensivo y mitigación de vulnerabilidades corporativas."
+                                        data-imagen="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=700&fit=crop">
+                                        Ver Programa
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Curso 3 -->
                     <div class="col mb-5">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem; background-color: #0369a1;">Nuevo</div>
-                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3_0jlhxaKqcVinQMqjnuyEc4VGTbCez5n9f71Tjj_60K-FqUxjdr6uE&s=10" alt="Diseño UX UI" />
+                        <div class="card h-100 shadow-sm border-0 text-white position-relative" style="background-color: #0b132b;">
+                            <div class="badge bg-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3_0jlhxaKqcVinQMqjnuyEc4VGTbCez5n9f71Tjj_60K-FqUxjdr6uE&s=10" alt="Diseño UX UI" style="height: 180px; object-fit: cover;" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder text-dark">Diseño UX/UI Profesional</h5>
+                                    <h5 class="fw-bolder text-white">Diseño UX/UI Profesional</h5>
                                     <span class="text-muted text-decoration-line-through">S/ 300.00</span>
-                                    <span class="fw-bold" style="color: #0284c7;">S/ 220.00</span>
+                                    <span class="text-info fw-bold">S/ 220.00</span>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn mt-auto" style="color: #0284c7; border-color: #0284c7;" href="formulario.html">Inscribirse</a></div>
+                                <div class="text-center">
+                                    <button class="btn btn-outline-info mt-auto w-100 btn-seleccionar" 
+                                        data-codigo="ADV-2024-UX"
+                                        data-titulo="Diseño UX/UI Profesional"
+                                        data-precioantiguo="S/ 300.00"
+                                        data-precioactual="S/ 220.00 / mes"
+                                        data-descripcion="Conviértete en un experto diseñador de experiencias de usuario e interfaces digitales usando Figma, investigación de usuarios, wireframing y prototipado avanzado."
+                                        data-imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3_0jlhxaKqcVinQMqjnuyEc4VGTbCez5n9f71Tjj_60K-FqUxjdr6uE&s=500">
+                                        Ver Programa
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Curso 4 -->
                     <div class="col mb-5">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=450&h=300&fit=crop" alt="Marketing Digital" />
+                        <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0b132b;">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=450&h=300&fit=crop" alt="Marketing Digital" style="height: 180px; object-fit: cover;" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder text-dark">Marketing Digital & SEO</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <p class="text-muted">S/ 200.00</p>
+                                    <h5 class="fw-bolder text-white">Marketing Digital & SEO</h5>
+                                    <p class="text-info">S/ 200.00 / mes</p>
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn mt-auto" style="color: #0284c7; border-color: #0284c7;" href="formulario.html">Inscribirse</a></div>
+                                <div class="text-center">
+                                    <button class="btn btn-outline-info mt-auto w-100 btn-seleccionar" 
+                                        data-codigo="ADV-2024-MKT"
+                                        data-titulo="Marketing Digital & SEO"
+                                        data-precioantiguo="S/ 280.00"
+                                        data-precioactual="S/ 200.00 / mes"
+                                        data-descripcion="Impulsa negocios en internet mediante estrategias avanzadas de posicionamiento orgánico SEO, pauta publicitaria en redes sociales y embudos de conversión."
+                                        data-imagen="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=700&fit=crop">
+                                        Ver Programa
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Footer-->
-        <footer class="py-5" style="background-color: #0f172a !important;">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Instituto Advance 2026 - Todos los derechos reservados</p></div>
+        <footer class="py-5" style="background-color: #0b132b !important; border-top: 1px solid #1c2541;">
+            <div class="container"><p class="m-0 text-center text-info">Copyright &copy; Instituto Advance 2026 - Todos los derechos reservados</p></div>
         </footer>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS -->
-        <script src="js/scripts.js"></script>
+        
+        <!-- JavaScript interno integrado -->
+        <script>
+            document.addEventListener('DOMContentLoaded', event => {
+
+                // --- 1. Cambio dinámico de curso al hacer clic en "Inscribirse / Ver Programa" ---
+                const botonesSeleccionar = document.querySelectorAll('.btn-seleccionar');
+
+                botonesSeleccionar.forEach(boton => {
+                    boton.addEventListener('click', function () {
+                        // Capturar datos del botón seleccionado
+                        const codigo = this.getAttribute('data-codigo');
+                        const titulo = this.getAttribute('data-titulo');
+                        const precioAntiguo = this.getAttribute('data-precioantiguo');
+                        const precioActual = this.getAttribute('data-precioactual');
+                        const descripcion = this.getAttribute('data-descripcion');
+                        const imagen = this.getAttribute('data-imagen');
+
+                        // Actualizar los elementos de la sección superior
+                        document.getElementById('txtCodigo').innerText = `CÓDIGO: ${codigo}`;
+                        document.getElementById('txtTitulo').innerText = titulo;
+                        document.getElementById('txtPrecioAntiguo').innerText = precioAntiguo;
+                        document.getElementById('txtPrecioActual').innerText = precioActual;
+                        document.getElementById('txtDescripcion').innerText = descripcion;
+                        document.getElementById('imgPrincipal').src = imagen;
+
+                        // Desplazar suavemente la vista hacia la parte superior
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                });
+
+                // --- 2. Contador interactivo para el Carrito / Matrícula ---
+                const btnInscribir = document.getElementById("btnInscribir");
+                const inputCantidad = document.getElementById("inputQuantity");
+                const badgeCarrito = document.getElementById("badgeCarrito");
+
+                if (btnInscribir && inputCantidad && badgeCarrito) {
+                    btnInscribir.addEventListener("click", function () {
+                        const cantidad = parseInt(inputCantidad.value) || 1;
+                        let actual = parseInt(badgeCarrito.innerText) || 0;
+                        badgeCarrito.innerText = actual + cantidad;
+                        
+                        alert(`¡Se han añadido ${cantidad} vacante(s) al carrito de matrícula!`);
+                    });
+                }
+
+            });
+        </script>
     </body>
 </html>
